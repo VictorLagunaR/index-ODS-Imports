@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <title>ODS Imports</title>
+     <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+            text-decoration: none;
+        }
+        body{
+            font-size: 100%;
+            background: linear-gradient(#fff, rgb(80, 79, 79));
+        }
+        header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px;
+            padding-left: 0;
+            border-bottom:1px solid rgb(201, 200, 200);
+            font-size: 15px;
+        }
+        .logo{
+            height: 65px;
+            border: 1px solid rgb(177, 177, 177);
+        }
+        .menu-cabecalho{
+            display: flex;
+            gap: 32px;
+            
+        }
+        main{
+            border-top:1px solid rgb(201, 200, 200);
+            margin-top: 25px;
+            margin-left: 14%;
+            margin-right: 14%;
+            z-index: 0;
+        }
+        .a-cabecalho{
+            color: rgb(68, 66, 66);
+        }
+        footer{
+            border-top: 2px solid rgb(126, 125, 125);
+            padding-top: 20px;
+            text-align: center;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 20px;
+            color: white;
+        }
+        .dp-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin-left: 8%;
+            margin-right: 4%;
+        }
+.dp-menu{
+    color: black;
+    
+}
+
+
+.dp-menu ul li {
+    margin-left: 7% ;
+    display: inline;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dp-menu ul li a {
+    /*color: var(--cor-primaria);*/
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px;
+    border-bottom: none; 
+    
+}
+
+.dp-menu ul li a:hover {
+    /*background-color: var(--cor-hover);*/
+    border-bottom:2px solid black;
+    padding-bottom: 10px;
+    
+}
+
+/*sub menu*/
+.dp-menu ul ul {
+    display: none;
+    
+    position: fixed;
+    background-color: rgb(238, 238, 238);
+    border: 1px solid rgb(126, 125, 125);
+    width: 310px;
+    height: 150px;
+    justify-content: left;
+    text-align: justify;
+    border-radius: 2px;
+    padding: 0;
+    margin-top: -12px;
+    margin-left: 150px;
+    z-index: 1;
+    
+}
+
+.dp-menu ul li:hover ul {
+    display:block;
+    
+    border-top: none;
+    
+}
+.dp-menu ul li ul a:hover {
+    color: rgb(99, 98, 98);
+    border-bottom: none;
+    
+    
+}
+.dp-menu ul ul li a {
+    
+    position:initial;
+}
+.item{
+    justify-content: center;
+    
+}
+     </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="logo.PNG" alt="logo">
+        <nav class="menu-cabecalho">
+            <a href="#" class="a-cabecalho"><strong>Entrar</strong></a>
+            <a href="#" class="a-cabecalho"><strong>Criar conta</strong></a>
+        </nav>
+    </header>
+    <nav class="dp-menu">
+        <ul>
+            <li><a href="#">Fashion</a></li>
+            <li><a href="#">Roupas</a>
+                <ul>
+                    <li><a href="#">Masculinas</a></li>
+                    <li><a href="#">Femininas</a></li>
+                    <li><a href="#">Moletons</a></li>
+                    <li><a href="#">Camisetas</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li style="margin-left: 100px;"><a href="#">Calças</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tênis</a></li>
+            <li><a href="#">Bonés</a></li>
+            <li><a href="#">Acessórios</a>
+                <ul style="height: 110px; width: 155px; left: -1.6rem; position: absolute; justify-content: left; text-align: center; margin-left: 0;">
+                    <li><a href="#">Masculinas</a></li>
+                    <li><a href="#">Femininas</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Relógios</a></li>
+        </ul>
+    </nav>
+    <main id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" active></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+ 
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img  src="tenis.png" alt="conteúdo" style="width: 100%; height: 95%;">
+                
+            </div>
+            <div class="item">
+                <img src="tenis2.jpg" alt="conteúdo" style="width: 100%">
+                
+        </div>
+        </div>
+        <!-- Controles direita & esuqerda -->
+        <a href="#myCarousel" class="left carousel-control" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#myCarousel" class="right carousel-control" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+        </div>
+    </main>
+    <footer>direitos reservados a Victor Laguna Rodrigues</footer>
+</body>
+</html>
